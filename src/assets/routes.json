@@ -1,0 +1,6 @@
+[
+    { "text": "About", "url": "/" },
+    { "text": "Skills", "url": "/skills/" },
+    { "text": "Projects", "url": "/projects/" },
+    { "text": "Contact", "url": "/contact/" }
+  ]

@@ -1,0 +1,43 @@
+---
+const { character } = Astro.props;
+import '@fontsource-variable/playfair-display';
+---
+
+<header class="hero">
+    <a href="/">
+        <img class="avatar" src={"/images/" + character} alt="Yorch">    
+    </a> 
+</header>
+
+<style>
+    .hero {
+        --color-dark: color-mix(in srgb, var(--theme-color-dark), black 60%);
+        --color-light: color-mix(in srgb, var(--theme-color-dark), white 60%);
+
+        width: 100%;
+        height: 350px;
+        background-image:
+            url("/images/black-felt.png"),
+            linear-gradient(
+                color-mix(in srgb, var(--theme-color-dark), transparent 15%),
+                color-mix(in srgb, var(--theme-color-light), transparent 5%)
+            ),
+            radial-gradient(circle, transparent 0% 15%, black 35%),
+            repeating-conic-gradient(
+                var(--color-dark) 0 14.5deg,
+                var(--color-light) 15deg 30deg
+            );
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 0 150px 20px #000c inset;
+        
+        & .avatar {
+            border-radius: 50%;
+            height: 200px;
+            transform: translateY( 70px );
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+   
+</style>

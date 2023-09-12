@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+import Icon from '@components/Icon.astro';
+
+const title = "Yorch Dev"
+const description = "Portfolio de Jorge Campo aka Yorch"
+---
+
+<BaseLayout title={title} description={description} >
+	<div class="wrapper">
+		<div class="name-wrapper">
+			<div class="name">
+				<Icon icon="terminal-window" color="var(--theme-color-lightest)" size="1.6em" gradient/>
+				<span> Jorge Campo</span>                
+			</div>
+			<div class="role">
+				<span>Full Stack Developer / Pentester</span>   
+			</div>
+		</div>
+		<div class="about">
+			<h2>about me...</h2>
+			<p>Soy un Desarrollador Full Stack y Pentester. Atención al detalle,
+				capacidad organizativa y multitarea son algunas de mis cualidades.
+				Acostumbrado a trabajar en equipo durante toda mi carrera profesional.
+				Apasionado de las tecnologías y gran nivel de curiosidad para investigar
+				y seguir aprendiendo.</p>
+		</div>
+	</div>	
+</BaseLayout>
+
+<style>
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--theme-color-dark);
+		background-color: #404959;
+    	background-image: 
+        	radial-gradient(at 47% 33%, hsl(22.06, 86%, 65%) 0, transparent 59%), 
+        	radial-gradient(at 82% 65%, hsl(15.97, 65%, 57.99999999999999%) 0, transparent 55%);
+}
+
+		
+		& .name-wrapper {
+            color: #fff;
+            font-family: 'Playfair Display Variable', sans-serif;            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+			padding: 1.5rem;
+
+            & .name, .role {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+		
+		& .about {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+            font-family: 'Playfair Display Variable', sans-serif;  
+
+			& p {
+				width: 50%;
+				text-align: justify;
+			}
+		}
+    }        
+</style>
